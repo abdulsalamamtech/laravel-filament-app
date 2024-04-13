@@ -44,16 +44,47 @@ please visit the [Dev. AbdulsalamAmtech](https://bit.ly/abdulsalamamtech).
 - **[Laravel Filament](https://filamentphp.com/)**
 
 
-For brevity in this guide, we will disable Laravel's mass assignment protection. Filament only saves valid data to models so the models can be unguarded safely. 
+Install a new laravel project
+Setting up the database and models
+Run migration
+```cli
+
+    php artisan migrate
+
+```    
+
+
+For brevity in this guide, we will disable Laravel's mass assignment protection. Filament only saves valid data to models so the models can be unguarded safely.
+
 ```php
-    Model::unguard();
+
+    // add Model::unguard() to the boot() method of app/Providers/AppServiceProvider.php
+    use Illuminate\Database\Eloquent\Model;
+ 
+    public function boot(): void
+    {
+        Model::unguard();
+    }
+
 ```
 
 
 Install filament package
 ```cli
+
     composer require filament/filament:"^3.2" -W --ignore-platform-req=ext-intl
+
+    php artisan filament:install --panels
+
 ```
+
+Create a user from the terminal
+```php
+
+    php artisan make:filament-user
+
+```
+
 
 
 ## Contributing
