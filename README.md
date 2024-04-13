@@ -39,12 +39,12 @@ For more information about the developer of this project,
 please visit the [Dev. AbdulsalamAmtech](https://bit.ly/abdulsalamamtech).
 
 
-### Laravel Filament Application
+## Laravel Filament Application
 
 - **[Laravel Filament](https://filamentphp.com/)**
 
 
-Install a new laravel project
+### Install a new laravel project
 Setting up the database and models
 Run migration
 ```cli
@@ -53,9 +53,8 @@ Run migration
 
 ```    
 
-
+### Disable mass assignment
 For brevity in this guide, we will disable Laravel's mass assignment protection. Filament only saves valid data to models so the models can be unguarded safely.
-
 ```php
 
     // add Model::unguard() to the boot() method of app/Providers/AppServiceProvider.php
@@ -69,7 +68,7 @@ For brevity in this guide, we will disable Laravel's mass assignment protection.
 ```
 
 
-Install filament package
+### Install filament package
 ```cli
 
     composer require filament/filament:"^3.2" -W --ignore-platform-req=ext-intl
@@ -78,12 +77,18 @@ Install filament package
 
 ```
 
-Create a user from the terminal
+### Create a user from the terminal
 ```php
 
     php artisan make:filament-user
 
 ```
+Then you can now login to the admin dashbord
+localhost:8000/admin/login
+
+
+# Introducing resources
+In Filament, resources are static classes used to build CRUD interfaces for your Eloquent models. They describe how administrators can interact with data from your panel using tables and forms.
 
 
 
