@@ -35,8 +35,8 @@ This project is a laravel filament basic application
 
 
 ## Developer
-For more information about the developer of this project,
-please visit the [Dev. AbdulsalamAmtech](https://bit.ly/abdulsalamamtech).
+For more information about the developer of this project, 
+please visit  [Dev. AbdulsalamAmtech](https://bit.ly/abdulsalamamtech).
 
 
 ## Laravel Filament Application
@@ -54,6 +54,7 @@ please visit the [Dev. AbdulsalamAmtech](https://bit.ly/abdulsalamamtech).
 
 ### Setting up the database and models
 create database migration add all necessary relationships
+eg [user, owner, patient, treatment]
 Run migration
 ```cli
 
@@ -87,6 +88,8 @@ For brevity in this guide, we will disable Laravel's mass assignment protection.
 it will ask for the ID? [admin]
 you can enter admin
 
+Read more on [how to get started with the filament panels](https://filamentphp.com/docs/3.x/panels/getting-started)
+
 
 ### Create a user from the terminal
 make sure you have run migration before this!
@@ -95,12 +98,19 @@ make sure you have run migration before this!
     php artisan make:filament-user
 
 ```
-Then you can now login to the admin dashbord
+Then you can now login to the admin dashbord 
 localhost:8000/admin/login
 
 
 # Introducing resources
 In Filament, resources are static classes used to build CRUD interfaces for your Eloquent models. They describe how administrators can interact with data from your panel using tables and forms.
+```cli
+
+    php artisan make:filament-resource Patient
+
+```
+Visit localhost:8000/admin/patients in your browser and observe 
+a new link called "Patients" in the navigation
 
 
 
