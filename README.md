@@ -55,6 +55,7 @@ please visit  [Dev. AbdulsalamAmtech](https://bit.ly/abdulsalamamtech).
 ### Setting up the database and models
 create database migration add all necessary relationships
 eg [user, owner, patient, treatment]
+
 Run migration
 ```cli
 
@@ -63,7 +64,8 @@ Run migration
 ```    
 
 ### Disable mass assignment
-For brevity in this guide, we will disable Laravel's mass assignment protection. Filament only saves valid data to models so the models can be unguarded safely.
+For brevity in this guide, we will disable Laravel's mass assignment protection. 
+Filament only saves valid data to models so the models can be unguarded safely.
 ```php
 
     // add Model::unguard() to the boot() method of app/Providers/AppServiceProvider.php
@@ -78,9 +80,20 @@ For brevity in this guide, we will disable Laravel's mass assignment protection.
 
 
 ### Install filament package
+Install filament --with-all-dependencies
 ```cli
 
+    composer require filament/filament:"^3.2" -W
+
+    // Or ignore platform requirements
+
     composer require filament/filament:"^3.2" -W --ignore-platform-req=ext-intl
+
+```
+
+
+### Install the filament panels
+```php
 
     php artisan filament:install --panels
 
