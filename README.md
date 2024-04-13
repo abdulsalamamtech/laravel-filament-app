@@ -45,7 +45,15 @@ please visit the [Dev. AbdulsalamAmtech](https://bit.ly/abdulsalamamtech).
 
 
 ### Install a new laravel project
-Setting up the database and models
+```cli
+    
+    laravel new filament-app
+
+```
+
+
+### Setting up the database and models
+create database migration add all necessary relationships
 Run migration
 ```cli
 
@@ -76,8 +84,12 @@ For brevity in this guide, we will disable Laravel's mass assignment protection.
     php artisan filament:install --panels
 
 ```
+it will ask for the ID? [admin]
+you can enter admin
+
 
 ### Create a user from the terminal
+make sure you have run migration before this!
 ```php
 
     php artisan make:filament-user
