@@ -121,9 +121,54 @@ In Filament, resources are static classes used to build CRUD interfaces for your
 
     php artisan make:filament-resource Patient
 
+    // Or this will generate the resource base on your model
+    php artisan make:filament-resource Patient --generate
+
+    // You can also add soft delete
+    php artisan make:filament-resource Patient --generate --soft-deletes
+
+    // You can also generate the view
+    php artisan make:filament-resource Patient --generate --view
+
 ```
 Visit localhost:8000/admin/patients in your browser and observe 
 a new link called "Patients" in the navigation
+
+
+### Navigation icons
+To change the navigation icons
+visit [heroicons](https://heroicons.com)
+
+```php
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    protected static ?string $navigationIcon = 'heroicon-o-flag';
+
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+```
+
+
+### Navigation
+To change the navigation properties
+visit [filament navigation](https://filamentphp.com/docs/3.x/panels/navigation)
+
+The filament automatically use the table name and model attributes
+
+```php
+
+    // To change the label name
+    protected static ?string $navigationLabel = 'New Name';
+
+    protected static ?string $navigationLabel = 'Patients';
+
+    // To group the list
+    protected static ?string $navigationGroup = 'Services';
+
+    // To change the route link by default it will take the models name
+    protected static ?string $slug = 'patients-service';
+
+```
 
 
 
