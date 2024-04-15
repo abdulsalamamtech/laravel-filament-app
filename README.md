@@ -140,11 +140,12 @@ To change the navigation icons
 visit [heroicons](https://heroicons.com)
 
 ```php
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     protected static ?string $navigationIcon = 'heroicon-o-flag';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-shield-check';
 
 ```
 
