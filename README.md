@@ -173,6 +173,96 @@ The filament automatically use the table name and model attributes
 
 
 
+
+
+# PHP Extensions:
+Certainly! When working with Laravel 11, there are some important extensions and requirements you’ll need to consider. Let’s dive into the details:
+
+Ensure that your web server has the following minimum PHP version and extensions:
+PHP >= 8.2
+
+## Extensions:
+- Ctype
+- cURL
+- DOM
+- Fileinfo
+- Filter
+- Hash
+- Mbstring
+- OpenSSL
+- PCRE
+- PDO
+- Session
+- Tokenizer
+- XML
+
+## Etenstions for linux:
+```cli
+
+    sudo apt-get install php-imap
+
+    sudo apt-get install php-mbstring
+
+    sudo apt-get install php-mysqli
+
+    sudo apt-get install php-openssl
+
+    sudo apt-get install php-pdo-mysql
+
+    sudo apt-get install php-pgsql
+
+    sudo apt-get install php-sqlite
+
+    sudo apt-get install php-pgsql
+    
+```
+
+## To enable extensions, verify that they are enabled in your .ini files:
+
+```cli
+
+    - /etc/php/8.3/cli/php.ini
+    - /etc/php/8.3/cli/conf.d/10-mysqlnd.ini
+    - /etc/php/8.3/cli/conf.d/10-opcache.ini
+    - /etc/php/8.3/cli/conf.d/10-pdo.ini
+    - /etc/php/8.3/cli/conf.d/15-xml.ini
+    - /etc/php/8.3/cli/conf.d/20-calendar.ini
+    - /etc/php/8.3/cli/conf.d/20-ctype.ini
+    - /etc/php/8.3/cli/conf.d/20-curl.ini
+    - /etc/php/8.3/cli/conf.d/20-dom.ini
+    - /etc/php/8.3/cli/conf.d/20-exif.ini
+    - /etc/php/8.3/cli/conf.d/20-ffi.ini
+    - /etc/php/8.3/cli/conf.d/20-fileinfo.ini
+    - /etc/php/8.3/cli/conf.d/20-ftp.ini
+    - /etc/php/8.3/cli/conf.d/20-gettext.ini
+    - /etc/php/8.3/cli/conf.d/20-iconv.ini
+    - /etc/php/8.3/cli/conf.d/20-imap.ini
+    - /etc/php/8.3/cli/conf.d/20-intl.ini
+    - /etc/php/8.3/cli/conf.d/20-mbstring.ini
+    - /etc/php/8.3/cli/conf.d/20-mysqli.ini
+    - /etc/php/8.3/cli/conf.d/20-pdo_mysql.ini
+    - /etc/php/8.3/cli/conf.d/20-pdo_pgsql.ini
+    - /etc/php/8.3/cli/conf.d/20-pdo_sqlite.ini
+    - /etc/php/8.3/cli/conf.d/20-pgsql.ini
+    - /etc/php/8.3/cli/conf.d/20-phar.ini
+    - /etc/php/8.3/cli/conf.d/20-posix.ini
+    - /etc/php/8.3/cli/conf.d/20-readline.ini
+    - /etc/php/8.3/cli/conf.d/20-shmop.ini
+    - /etc/php/8.3/cli/conf.d/20-simplexml.ini
+    - /etc/php/8.3/cli/conf.d/20-sockets.ini
+    - /etc/php/8.3/cli/conf.d/20-sqlite3.ini
+    - /etc/php/8.3/cli/conf.d/20-sysvmsg.ini
+    - /etc/php/8.3/cli/conf.d/20-sysvsem.ini
+    - /etc/php/8.3/cli/conf.d/20-sysvshm.ini
+    - /etc/php/8.3/cli/conf.d/20-tokenizer.ini
+    - /etc/php/8.3/cli/conf.d/20-xmlreader.ini
+    - /etc/php/8.3/cli/conf.d/20-xmlwriter.ini
+    - /etc/php/8.3/cli/conf.d/20-xsl.ini
+    - /etc/php/8.3/cli/conf.d/20-zip.ini
+
+```
+
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
